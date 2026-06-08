@@ -20,14 +20,14 @@ function App() {
   }
 
   return (
-    <div className="w-screen h-screen bg-background flex items-center justify-center antialiased">
-      <div className="w-[60%] h-[80vh] bg-white rounded-lg shadow-lg flex justify-between items-center relative">
-        <div className="flex flex-col items-center justify-center gap-4 p-8 bg-secondary rounded-l-lg h-full w-full text-text font-bold">
-          <h1 className="text-3xl">Join to our community!</h1>
-          <p>Be part of our growing community</p>
+    <div className="lg:w-screen lg:h-screen bg-background flex items-center justify-center antialiased py-10 px-4">
+      <div className="w-[60%] max-xl:w-[80%] lg:h-[70vh] max-sm:w-full bg-white rounded-lg shadow-lg flex lg:flex-row flex-col justify-between items-center relative">
+        <div className="flex flex-col justify-center items-center h-full flex-1 gap-4 p-8 bg-secondary lg:rounded-l-lg rounded-t-lg w-full text-text font-bold">
+          <h1 className="text-3xl text-center">Join to our community!</h1>
+          <p className="text-center">Be part of our growing community</p>
           <img src={community} alt="community" className="w-[80%] h-[30%]" />
         </div>
-        <div className="flex flex-col items-center justify-center gap-4 p-8 h-full w-full">
+        <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 h-full w-full">
           <h1 className="text-4xl font-bold mb-4">Sign Up</h1>
           <form
             action=""
