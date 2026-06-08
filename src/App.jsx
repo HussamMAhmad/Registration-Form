@@ -109,7 +109,7 @@ function App() {
             <FaFacebookF className="w-5 h-5 text-gray-500 cursor-pointer hover:text-primary transition-colors" />
           </div>
         </div>
-        <div className="absolute -top-5 left-[50%] bg-white p-4 rounded-full shadow-md -translate-x-1/2 text-primary">
+        <div className="absolute top-0 left-[50%] bg-white p-4 rounded-full shadow-md -translate-x-1/2 -translate-y-1/2 text-primary">
           <UserRoundPlus />
         </div>
       </div>
