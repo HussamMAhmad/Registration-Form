@@ -1,0 +1,75 @@
+import { useState } from "react";
+import "./App.css";
+import community from "./assets/community.png";
+import { UserRoundPlus, User, Lock, Mail } from "lucide-react";
+import { FaGoogle, FaGithub, FaFacebookF } from "react-icons/fa";
+
+function App() {
+  return (
+    <div className="w-screen h-screen bg-background flex items-center justify-center antialiased">
+      <div className="w-[60%] h-[70vh] bg-white rounded-lg shadow-lg flex justify-between items-center relative">
+        <div className="flex flex-col items-center justify-center gap-4 p-8 bg-secondary rounded-l-lg h-full w-full text-text font-bold">
+          <h1 className="text-3xl">Join to our community!</h1>
+          <p>Be part of our growing community</p>
+          <img src={community} alt="community" className="w-[80%] h-[30%]" />
+        </div>
+        <div className="flex flex-col items-center justify-center gap-4 p-8 h-full w-full">
+          <h1 className="text-4xl font-bold mb-4">Sign Up</h1>
+          <form
+            action=""
+            className="flex flex-col items-center justify-center gap-8 w-full"
+          >
+            <div className="w-full relative">
+              <input
+                type="text"
+                placeholder="Username"
+                className="w-full p-2 border-secondary outline-0 bg-gray-200 rounded-md tracking-wide caret-secondary text-[16px]"
+              />
+              <User className=" absolute top-[50%] right-4 translate-[-50%] text-slate-400 w-5 h-5" />
+            </div>
+            <div className="w-full relative">
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full p-2 border-secondary outline-0 bg-gray-200 rounded-md tracking-wide caret-secondary text-[16px]"
+              />
+              <Mail className=" absolute top-[50%] right-4 translate-[-50%] text-slate-400 w-5 h-5" />
+            </div>
+            <div className="w-full relative">
+              <input
+                type="password"
+                placeholder="Password"
+                className="w-full p-2 border-secondary outline-0 bg-gray-200 rounded-md tracking-wide caret-secondary text-[16px]"
+              />
+              <Lock className=" absolute top-[50%] right-4 translate-[-50%] text-slate-400 w-5 h-5" />
+            </div>
+            <div className="w-full relative">
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                className="w-full p-2 border-secondary outline-0 bg-gray-200 rounded-md tracking-wide caret-secondary text-[16px]"
+              />
+              <Lock className=" absolute top-[50%] right-4 translate-[-50%] text-slate-400 w-5 h-5" />
+            </div>
+            <button className="w-full bg-secondary p-2 text-white font-bold rounded-md cursor-pointer hover:bg-primary transition-colors duration-300">
+              Sign Up
+            </button>
+          </form>
+          <p className="text-[14px] text-gray-500">
+            or login with social platforms
+          </p>
+          <div className="flex items-center justify-center gap-4">
+            <FaGoogle className="w-5 h-5 text-gray-500 cursor-pointer hover:text-primary transition-colors" />
+            <FaGithub className="w-5 h-5 text-gray-500 cursor-pointer hover:text-primary transition-colors" />
+            <FaFacebookF className="w-5 h-5 text-gray-500 cursor-pointer hover:text-primary transition-colors" />
+          </div>
+        </div>
+        <div className="absolute -top-5 left-[50%] bg-white p-4 rounded-full shadow-md translate-x-[-50%] text-primary">
+          <UserRoundPlus />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
