@@ -5,20 +5,9 @@
   font-family: 'Inter', sans-serif;
 }
 
-:root {
-  --primary-color: #0671ff;
-  --secondary-color: #48b0ff;
-  --background: #edf7ff;
-  --text-color: #F4FAFC;
-}
-
 @theme {
-  --color-background: var(--background);
-  --color-primary: var(--primary-color);
-  --color-secondary: var(--secondary-color);
-  --color-text: var(--text-color);
-}
-
-body {
-  @apply bg-background font-sans;
+  --color-background: #edf7ff;
+  --color-primary: #0671ff;
+  --color-secondary: #48b0ff;
+  --color-text: #F4FAFC;
 }

@@ -8,6 +8,8 @@ import UserInfo from "./lib/validation";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 function App() {
+  const [isSucsse, setIsSucsse] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -16,12 +18,16 @@ function App() {
 
   function handleSignUp(data) {
     console.log(data);
+    setIsSucsse(true);
+    setTimeout(() => {
+      setIsSucsse(false);
+    }, 2000);
     return;
   }
 
   return (
-    <div className="lg:w-screen lg:h-screen bg-background flex items-center justify-center antialiased py-10 px-4">
-      <div className="w-[60%] max-xl:w-[80%] lg:h-[70vh] max-sm:w-full bg-white rounded-lg shadow-lg flex lg:flex-row flex-col justify-between items-center relative">
+    <div className="lg:w-screen relative lg:h-screen bg-background flex items-center justify-center antialiased py-10 px-4">
+      <div className="w-[60%] max-xl:w-[80%] lg:h-[80vh] max-sm:w-full bg-white rounded-lg shadow-lg flex lg:flex-row flex-col justify-between items-center relative">
         <div className="flex flex-col justify-center items-center h-full flex-1 gap-4 p-8 bg-secondary lg:rounded-l-lg rounded-t-lg w-full text-text font-bold">
           <h1 className="text-3xl text-center">Join to our community!</h1>
           <p className="text-center">Be part of our growing community</p>
@@ -93,7 +99,9 @@ function App() {
                 <Lock className=" absolute top-[50%] right-4 -translate-1/2 text-slate-400 w-5 h-5" />
               </div>
               <div className="text-red-600 text-[14px]">
-                {errors.confirmPassword && <span>{errors.confirmPassword.message}</span>}
+                {errors.confirmPassword && (
+                  <span>{errors.confirmPassword.message}</span>
+                )}
               </div>
             </div>
             <button className="w-full bg-secondary p-2 text-white font-bold rounded-md cursor-pointer hover:bg-primary transition-colors duration-300">
@@ -113,6 +121,13 @@ function App() {
           <UserRoundPlus />
         </div>
       </div>
+      {isSucsse && (
+        <div className="absolute bottom-4 right-1 -translate-x-1.5">
+          <div className="rounded-2xl bg-green-400 text-xl p-4 text-white transition-all delay-300 shadow-lg">
+            Sucssefully sign up
+          </div>
+        </div>
+      )}
     </div>
   );
 }
