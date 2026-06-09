@@ -11,3 +11,18 @@
   --color-secondary: #48b0ff;
   --color-text: #F4FAFC;
 }
+
+.slide-card{
+  animation: slide-card 0.5s ease-out;
+}
+
+@keyframes slide-card {
+  0%{
+    transform :translateY(20px);
+    opacity: 0; 
+  }
+  100%{
+    transform : translateY(0px); 
+    opacity: 1;
+  }
+}

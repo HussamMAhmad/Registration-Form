@@ -122,8 +122,8 @@ function App() {
         </div>
       </div>
       {isSucsse && (
-        <div className="absolute bottom-4 right-1 -translate-x-1.5">
-          <div className="rounded-2xl bg-green-400 text-xl p-4 text-white transition-all delay-300 shadow-lg">
+        <div className="fixed bottom-4 right-1 -translate-x-1.5 slide-card">
+          <div className="rounded-2xl bg-green-400 text-[16px] p-4 text-white shadow-lg">
             Sucssefully sign up
           </div>
         </div>
